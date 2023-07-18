@@ -25,7 +25,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   max-width: 1230px;
   margin: 0 auto;
 }
@@ -234,6 +233,35 @@ right-banner-container {
   font-weight: 700;
   background: #e02c6d;
 }
+/* footer part */
+.footer {
+  background: #0a0826;
+}
+.footer-container {
+  margin: 0 auto;
+  max-width: 1230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+
+  text-align: center;
+}
+.footer-heading {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+}
+.footer-desc {
+  color: #d9dbe1;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.fa-brands {
+  color: white;
+  margin: 5px;
+}
 
 /* responsive part */
 @media screen and (max-width: 576px) {
@@ -287,5 +315,30 @@ right-banner-container {
   }
   .right-featured-row {
     width: 100%;
+  }
+}
+/* medium device */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .popular-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .logos-container img {
+    width: 70px;
+  }
+  .navbar {
+    flex-direction: column;
+  }
+  .manubar {
+    margin-top: 12px;
+  }
+  .banner-container {
+    flex-direction: column-reverse;
+  }
+  .left-banner-container {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
   }
 }
