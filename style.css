@@ -2,7 +2,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 html {
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -10,6 +10,9 @@ html {
   padding: 0;
   list-style: none;
   text-decoration: none;
+}
+section {
+  margin-top: 30px;
 }
 .navLogo {
   color: #3a3a3a;
@@ -21,7 +24,13 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 67px 100px;
+
+  max-width: 1230px;
+  margin: 0 auto;
+}
+.nav-container {
+  margin-top: 67px;
+  margin-bottom: 60px;
 }
 .manubar {
   display: flex;
@@ -35,6 +44,85 @@ html {
   font-weight: 600;
   line-height: normal;
 }
+/* banner part */
+.banner {
+  max-width: 1230px;
+  margin: 0 auto;
+}
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left-heading {
+  color: #3a3a3a;
+  font-family: Poppins;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 70px;
+}
+.left-desc {
+  color: #3a3a3a;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.btn-primary {
+  padding: 10px 24px;
+  align-items: flex-start;
+  gap: 8px;
+  border-radius: 38px;
+  background: #e02c6d;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 26px;
+}
+.right-banner-container {
+  background: url(./images/Circle\ design.svg);
+  background-repeat: no-repeat;
+  width: 475px;
+  height: 475px;
+  position: relative;
+}
+.right-img {
+  width: 430px;
+  margin-top: 27px;
+  margin-left: 35px;
+  position: absolute;
+}
+right-banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* logos part */
+.logos {
+  max-width: 1230px;
+  margin: 0 auto;
+  margin-top: 6rem;
+  height: 20vh;
+}
+.logos-container {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(
+    135deg,
+    rgba(192, 204, 218, 0.1) 0%,
+    rgba(192, 204, 218, 0.6) 50.38%,
+    rgba(192, 204, 218, 0.1) 100%
+  );
+  /* border-left: 0;
+  border-right: 0; */
+  border-image-slice: 1;
+  padding: 23px 0;
+}
 /* responsive part */
 @media screen and (max-width: 576px) {
   .navbar {
@@ -46,5 +134,20 @@ html {
   }
   .manubar {
     margin-top: 15px;
+  }
+  .banner-container {
+    flex-direction: column-reverse;
+  }
+
+  .right-img {
+    width: 100%;
+  }
+  .logos-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .logos-container img {
+    width: 30%;
+    margin: 0 auto;
   }
 }
