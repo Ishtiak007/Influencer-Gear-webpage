@@ -1,5 +1,6 @@
 body {
   font-family: "Poppins", sans-serif;
+  padding: 5px;
 }
 html {
   overflow-x: hidden;
@@ -49,6 +50,9 @@ section {
   max-width: 1230px;
   margin: 0 auto;
 }
+.left-banner-container {
+  width: 50%;
+}
 .banner-container {
   display: flex;
   align-items: center;
@@ -85,15 +89,13 @@ section {
 .right-banner-container {
   background: url(./images/Circle\ design.svg);
   background-repeat: no-repeat;
-  width: 475px;
-  height: 475px;
+  background-size: contain;
+  width: 50%;
   position: relative;
 }
 .right-img {
-  width: 430px;
-  margin-top: 27px;
-  margin-left: 35px;
-  position: absolute;
+  width: 80%;
+  padding: 20px;
 }
 right-banner-container {
   display: flex;
@@ -104,8 +106,9 @@ right-banner-container {
 .logos {
   max-width: 1230px;
   margin: 0 auto;
-  margin-top: 6rem;
-  height: 20vh;
+  margin-top: 5rem;
+  /* margin-top: 6rem;
+  height: 20vh; */
 }
 .logos-container {
   display: flex;
@@ -123,6 +126,72 @@ right-banner-container {
   border-image-slice: 1;
   padding: 23px 0;
 }
+/* popular-heading part */
+.popular-collection {
+  max-width: 1230px;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+.popular-heading {
+  color: #3a3a3a;
+  font-family: Poppins;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 70px;
+  text-align: center;
+}
+.popular-row {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.card {
+  width: 330px;
+  padding: 15px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+.card-img {
+  width: 100%;
+  border-radius: 5px;
+}
+.card-heading {
+  color: #18191f;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+  margin-top: 10px;
+}
+.price {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 24px;
+  margin-top: 10px;
+  font-weight: 400;
+  line-height: 150%;
+}
+.card-desc {
+  color: #787885;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 143%;
+  letter-spacing: 0.252px;
+}
+.fa-solid {
+  color: #fb8200;
+}
+.see-you {
+  margin-right: 60px;
+  padding: 20px;
+}
+
+.see-more {
+  text-align: right;
+  color: rgba(224, 44, 109, 0.87);
+  font-size: 16px;
+  font-weight: 700;
+}
 /* responsive part */
 @media screen and (max-width: 576px) {
   .navbar {
@@ -138,7 +207,17 @@ right-banner-container {
   .banner-container {
     flex-direction: column-reverse;
   }
-
+  .right-banner-container {
+    width: 100%;
+  }
+  .left-banner-container {
+    width: 100%;
+    padding: 10px;
+  }
+  .left-heading {
+    font-size: 35px;
+    line-height: 40px;
+  }
   .right-img {
     width: 100%;
   }
@@ -148,6 +227,12 @@ right-banner-container {
   }
   .logos-container img {
     width: 30%;
+    margin: 0 auto;
+  }
+  .popular-row {
+    grid-template-columns: 1fr;
+  }
+  .card {
     margin: 0 auto;
   }
 }
